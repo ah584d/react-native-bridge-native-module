@@ -44,7 +44,7 @@ const App = () => {
 	const [isOn, setIsOn] = useState<boolean>(false);
 
 	const callToastNativeFunction = () => {
-		ToastNativeModule.show('test', 1000);
+		ToastNativeModule.show('Message RN displayed in java function', 1000);
 	}
 
 	const turnOn = () => {
@@ -63,7 +63,7 @@ const App = () => {
 
 	const renderBulb = () => (
 		<View style={styles.container}>
-			<Text>Welcome to Light App!!</Text>
+			<Text style={{paddingBottom:10,color: 'blue', fontSize: 12}}>RN pass parameters to java function</Text>
 			<Text> Bulb is {isOn ? "ON": "OFF"}</Text>
 			{!isOn ? <Button onPress={turnOn} title="Turn ON " color="#FF6347" /> :
 			<Button onPress={turnOff} title="Turn OFF " color="#FF6347" /> }
@@ -85,35 +85,9 @@ const App = () => {
 				</View>
 				)}
 				<View style={styles.body}>
-					<View style={styles.sectionContainer}>
-						<Text style={styles.sectionTitle}>Step One</Text>
-						<Text style={styles.sectionDescription}>
-							Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-							screen and then come back to see your edits.
-						</Text>
-					</View>
-					<View style={styles.sectionContainer}>
-						<Text style={styles.sectionTitle}>See Your Changes</Text>
-						<Text style={styles.sectionDescription}>
-							<ReloadInstructions />
-						</Text>
-					</View>
-					<View style={styles.sectionContainer}>
-						<Text style={styles.sectionTitle}>Debug</Text>
-						<Text style={styles.sectionDescription}>
-							<DebugInstructions />
-						</Text>
-					</View>
-					<View style={styles.sectionContainer}>
-						<Text style={styles.sectionTitle}>Learn More</Text>
-						<Text style={styles.sectionDescription}>
-							Read the docs to discover what to do next:
-						</Text>
-					</View>
-					<LearnMoreLinks />
-				</View>
-				<Button onPress={callToastNativeFunction} title='text me' />
+				<Button onPress={callToastNativeFunction} title='RN button, calls java function ' />
 				{renderBulb()}
+				</View>
 			</ScrollView>
 		</SafeAreaView>
 	</>

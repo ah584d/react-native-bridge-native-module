@@ -29,10 +29,10 @@ public class Switch extends Button {
 	private void changeColor() {
         if (isTurnedOn) {
             setBackgroundColor(Color.YELLOW);
-            setText("I am ON");
+            setText("JAVA BUTTON - I am ON");
         } else {
             setBackgroundColor(Color.GRAY);
-            setText("I am OFF");
+            setText("JAVA BUTTON - I am OFF");
         }
     }
 	
