@@ -1,4 +1,4 @@
-<img src="pictures/bridge.png"  width="15%" height="15%" align="right" />
+<img src="pictures/bridgeReact.png"  width="15%" height="15%" align="right" />
 
 ## react-native-bridge-native-module
 
